@@ -16,7 +16,7 @@ set config=openssl.%domain%.cnf
 @REM 根证书CA名称
 set rootCAName=Your_Root_CA_Name
 
-@REM OCSP服务器IP
+@REM OCSP服务器IP (勿动)
 set ip=127.0.0.1:443
 
 @REM OCSP服务器域名

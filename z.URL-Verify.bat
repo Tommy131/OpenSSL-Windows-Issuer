@@ -1,5 +1,5 @@
 @echo off
-TITLE OCSP Service
+TITLE Certificate Verify Tool
 
 call config.bat
 

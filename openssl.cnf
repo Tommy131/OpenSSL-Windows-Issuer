@@ -32,6 +32,7 @@ oid_section = new_oids
 
 
 # 全局设置
+owo_OCSP_Domain            = ocsp.yourdomain.com
 owo_rootCAFileName         = Your_Root_CA_Name
 owo_domain                 = yourdomain.com
 owo_countryName            = DE
@@ -199,15 +200,15 @@ certificatePolicies   = @polsect
 authorityInfoAccess   = @ocsp_section
 
 [ ocsp_section ]
-caIssuers;URI.0       = http://${owo_domain}/CAcerts/${owo_rootCAFileName}_chain.crt
-OCSP;URI.0            = http://${owo_domain}/ocsp
+caIssuers;URI.0       = http://${owo_OCSP_Domain}/CAcerts/${owo_rootCAFileName}_chain.crt
+OCSP;URI.0            = http://${owo_OCSP_Domain}/ocsp
 
 [ crl_section ]
-URI.0                 = http://${owo_domain}/rootca.crl
+URI.0                 = http://${owo_OCSP_Domain}/rootca.crl
 
 [ polsect ]
 policyIdentifier      = 2.5.29.32.0
-CPS.1                 = http://${owo_domain}/
+CPS.1                 = http://${owo_OCSP_Domain}/
 userNotice.1          = @notice
 
 [ notice ]
